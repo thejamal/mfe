@@ -1,7 +1,6 @@
 <template>
   <div class="remote2-app">
     <div class="card">
-      <div class="icon">🌟</div>
       <h1>Remote 2 - Vue App</h1>
       <p class="subtitle">This component is loaded from port 5002</p>
       
@@ -98,62 +97,64 @@ const totalCharacters = computed(() => {
 }
 
 .card {
-  background: white;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  max-width: 100%;
+  margin: 0;
 }
 
 .icon {
-  font-size: 4rem;
-  text-align: center;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 0.75rem;
 }
 
 h1 {
-  color: #1f2937;
-  text-align: center;
+  color: #000000;
+  text-align: left;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .subtitle {
-  text-align: center;
+  text-align: left;
   color: #6b7280;
   margin-bottom: 2rem;
   font-size: 1rem;
 }
 
 .interactive-section {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  color: white;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  border: none;
 }
 
 .interactive-section h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #000000;
 }
 
 .input-group {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .message-input {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: 2px solid white;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: #1f2937;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: #ffffff;
+  color: #000000;
 }
 
 .message-input::placeholder {
@@ -162,15 +163,15 @@ h1 {
 
 .message-input:focus {
   outline: none;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -178,7 +179,7 @@ h1 {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
@@ -186,32 +187,34 @@ h1 {
 }
 
 .btn-primary {
-  background: white;
-  color: #11998e;
+  background: #000000;
+  color: white;
 }
 
 .btn-primary:hover {
-  background: #f9fafb;
+  background: #1f2937;
 }
 
 .messages-container {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
-  padding: 1rem;
-  min-height: 150px;
-  max-height: 300px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  min-height: 120px;
+  max-height: 200px;
   overflow-y: auto;
+  border: none;
 }
 
 .message-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f3f4f6;
-  padding: 0.75rem 1rem;
+  background: transparent;
+  padding: 0.5rem 0;
   margin-bottom: 0.5rem;
-  border-radius: 8px;
-  color: #1f2937;
+  border-radius: 0;
+  color: #000000;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .message-text {
@@ -263,10 +266,10 @@ h1 {
 }
 
 .info-box {
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .info-box h3 {
@@ -298,22 +301,24 @@ h1 {
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .stat-item {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  color: white;
+  background: transparent;
+  padding: 1rem;
+  border-radius: 0;
+  text-align: left;
+  color: #000000;
+  border: none;
 }
 
 .stat-value {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
+  color: #000000;
 }
 
 .stat-label {
@@ -324,16 +329,16 @@ h1 {
 .tech-stack {
   display: flex;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: #000000;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 </style>

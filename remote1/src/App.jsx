@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="remote1-app">
       <div className="card">
-        <div className="icon">⚛️</div>
         <h1>Remote 1 - React App</h1>
         <p className="subtitle">This component is loaded from port 5001</p>
         

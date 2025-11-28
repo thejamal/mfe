@@ -10,10 +10,13 @@
   ],
   "scripts": {
     "install-all": "npm install && cd host && npm install && cd ../remote1 && npm install && cd ../remote2 && npm install",
-    "dev": "concurrently -n host,remote1,remote2 -c blue,green,yellow \"npm run dev:host\" \"npm run dev:remote1\" \"npm run dev:remote2\"",
+    "build:remotes": "cd remote1 && npm run build && cd ../remote2 && npm run build",
+    "dev": "concurrently -n host,remote1,remote2 -c blue,green,yellow \"npm run dev:host\" \"npm run preview:remote1\" \"npm run preview:remote2\"",
     "dev:host": "cd host && npm run dev",
     "dev:remote1": "cd remote1 && npm run dev",
-    "dev:remote2": "cd remote2 && npm run dev"
+    "dev:remote2": "cd remote2 && npm run dev",
+    "preview:remote1": "cd remote1 && npm run preview -- --port 5001 --strictPort",
+    "preview:remote2": "cd remote2 && npm run preview -- --port 5002 --strictPort"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

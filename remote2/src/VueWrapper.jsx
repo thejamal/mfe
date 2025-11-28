@@ -20,16 +20,5 @@ export default function VueWrapper() {
     };
   }, []);
 
-  return (
-    <div 
-      ref={ref} 
-      style={{
-        background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
-        borderRadius: '12px',
-        minHeight: '400px',
-        padding: '2rem'
-      }}
-    >
-    </div>
-  );
+  return <div ref={ref}></div>;
 }

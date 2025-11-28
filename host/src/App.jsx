@@ -116,29 +116,20 @@ function App() {
                   Start with: <code>npm run dev:{key}</code>
                 </div>
               )}
+              {selectedRemote === key && service.status === 'running' && (
+                <div className="launched-app">
+                  <div className="launch-message">
+                    ✓ {service.tech} App Launched Successfully
+                  </div>
+                  <Suspense fallback={<div className="loading">Loading remote module...</div>}>
+                    {key === 'remote1' && <Remote1App />}
+                    {key === 'remote2' && <Remote2App />}
+                  </Suspense>
+                </div>
+              )}
             </div>
           ))}
         </div>
-
-        {selectedRemote && services[selectedRemote].status === 'running' && (
-          <div className="remote-display">
-            <div className="remote-header">
-              <h2>Loaded: {services[selectedRemote].name}</h2>
-              <button 
-                className="close-btn"
-                onClick={() => setSelectedRemote(null)}
-              >
-                ✕
-              </button>
-            </div>
-            <div className="remote-content">
-              <Suspense fallback={<div className="loading">Loading remote module...</div>}>
-                {selectedRemote === 'remote1' && <Remote1App />}
-                {selectedRemote === 'remote2' && <Remote2App />}
-              </Suspense>
-            </div>
-          </div>
-        )}
 
         <div className="info-section">
           <h2>How to Use</h2>
