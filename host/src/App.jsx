@@ -1,8 +1,19 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import './App.css';
 
-const Remote1App = React.lazy(() => import('remote1/App'));
-const Remote2App = React.lazy(() => import('remote2/App'));
+const Remote1App = React.lazy(() => 
+  import('remote1/App').catch(err => {
+    console.error('Failed to load Remote1:', err);
+    return { default: () => <div style={{padding: '2rem', color: 'red'}}>Error loading Remote 1: {err.message}</div> };
+  })
+);
+
+const Remote2App = React.lazy(() => 
+  import('remote2/App').catch(err => {
+    console.error('Failed to load Remote2:', err);
+    return { default: () => <div style={{padding: '2rem', color: 'red'}}>Error loading Remote 2: {err.message}</div> };
+  })
+);
 
 function App() {
   const [services, setServices] = useState({

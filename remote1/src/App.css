@@ -1,5 +1,8 @@
 .remote1-app {
   padding: 2rem;
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  border-radius: 12px;
+  min-height: 400px;
 }
 
 .card {

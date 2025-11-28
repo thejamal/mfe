@@ -94,7 +94,7 @@ const totalCharacters = computed(() => {
 
 <style scoped>
 .remote2-app {
-  padding: 2rem;
+  padding: 0;
 }
 
 .card {
