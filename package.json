@@ -1,0 +1,21 @@
+{
+  "name": "mfe-demo",
+  "version": "1.0.0",
+  "description": "Micro Frontend Demo with React and Vue",
+  "private": true,
+  "workspaces": [
+    "host",
+    "remote1",
+    "remote2"
+  ],
+  "scripts": {
+    "install-all": "npm install && cd host && npm install && cd ../remote1 && npm install && cd ../remote2 && npm install",
+    "dev": "concurrently -n host,remote1,remote2 -c blue,green,yellow \"npm run dev:host\" \"npm run dev:remote1\" \"npm run dev:remote2\"",
+    "dev:host": "cd host && npm run dev",
+    "dev:remote1": "cd remote1 && npm run dev",
+    "dev:remote2": "cd remote2 && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
